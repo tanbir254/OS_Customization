@@ -1,0 +1,12 @@
+Windows 10 Lock Screen Timeout
+Follow the step:
+  Open the Registry Editor by hitting Start and typing "regedit." Press Enter or click "Open" to open Registry Editor and give it permission to make changes to your PC.
+  In the Registry Editor, use the left sidebar to navigate to the following key, or paste the path into the address bar:
+  "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\7516b95f-f776-4464-8c53-06167f40cc99\8EC4B3A5-6868-48c2-BE75-4F3044BE88A7"[without_quote]
+  In the right-hand pane, double-click the Attributes value to open its properties window.
+  Change the value in the "Value data" box from 1 to 2[HexaDecimal], and then click OK.
+
+  Now that you've enabled the timeout setting, it's time to fire up Power Options and put it to work. Hit Start, type "edit power plan," and then hit Enter to open Power Options.
+  In the Edit Plan Settings window, click the "Change advanced power settings" link.
+  In the Power Options dialog, expand the "Display" item and you'll see the new setting you added listed as "Console lock display off timeout." 
+  Expand that and you can then set the timeout for however many minutes you want.
