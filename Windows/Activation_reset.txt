@@ -1,0 +1,6 @@
+windows+x same time
+open
+terminal in admin mode and type cmd
+>>slmgr /rearm
+ok the pop up
+restart pc do complete
