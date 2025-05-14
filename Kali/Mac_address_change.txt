@@ -1,0 +1,40 @@
+Show all network interfaces and their MAC addresses
+$ ip link show
+
+Bring down the network interface (e.g., eth0, wlan0, etc.):
+Replace wlan0 with your actual network interface name:
+$ sudo ip link set wlan0 down
+
+Change the MAC address randomly:
+$ sudo macchanger -r wlan0
+
+Bring the interface back up:
+$ sudo ip link set wlan0 up
+
+
+==============================================================
+
+Full Command Chain
+$ sudo ip link set wlan0 down && sudo macchanger -r wlan0 && sudo ip link set wlan0 up
+
+
+==============================================================
+
+Automation Tip (Optional)
+You can add this to a script for quick use:
+
+#!/bin/bash
+IFACE="wlan0"
+sudo ip link set $IFACE down
+sudo macchanger -r $IFACE
+sudo ip link set $IFACE up
+
+Save it as mac_random.sh, make it executable with:
+$ chmod +x mac_random.sh
+
+Then run with:
+$ ./mac_random.sh
+
+
+
+
